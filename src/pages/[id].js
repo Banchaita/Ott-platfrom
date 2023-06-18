@@ -9,11 +9,11 @@ const MovieDetailPage = ({ movie }) => {
 
   if (!session) return <Login />;
 
-  const trailerIndex = movie.videos.results.findIndex(
+  const trailerIndex = movie?.videos?.results?.findIndex(
     (element) => element.type === "Trailer"
   );
 
-  const trailerURL = `https://www.youtube.com/watch?v=${movie.videos?.results[trailerIndex]?.key}`;
+  const trailerURL = `https://www.youtube.com/watch?v=${movie?.videos?.results[trailerIndex]?.key}`;
 
   return (
     <div>
