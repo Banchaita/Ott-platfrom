@@ -8,7 +8,7 @@ import Row from "@/components/Row";
 
 
 
-export default function musicon({
+export default function Musicon({
     moviePosters,
     trendingNow,
     topRated,
