@@ -34,9 +34,7 @@ const Home = () => {
             </div>
             {/* Grid Div 2 */}
             <div className="musicon p-4">
-              <Link href="/musicon">
                 <p className="footer-text">Musicon</p>
-              </Link>
             </div>
             {/* Grid Div 3 */}
             <div className="lifestyle p-4">

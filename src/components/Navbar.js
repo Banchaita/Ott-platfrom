@@ -11,7 +11,7 @@ const Navbar = () => {
   const router = useRouter();
   const isIndexPage = router.pathname === "/"; // Check if the current page is the index page
   const isStoryTellerPage = router.pathname === "/StoryTeller"; // Check if the current page is the index page
-  const isMusiconrPage = router.pathname === "/musicon"; // Check if the current page is the index page
+  // const isMusiconrPage = router.pathname === "/musicon"; // Check if the current page is the index page
 
   return (
     <nav>
@@ -56,7 +56,7 @@ const Navbar = () => {
               )}
           </ul>
 
-          <ul className="hidden space-x-4 md:flex">
+          {/* <ul className="hidden space-x-4 md:flex">
               {isMusiconrPage && (
                 <>
                   <Link href="/StoryTeller">
@@ -68,7 +68,7 @@ const Navbar = () => {
                   <li className="headerLink">My List</li>
                 </> 
               )}
-          </ul>
+          </ul> */}
           
         </div>
 
