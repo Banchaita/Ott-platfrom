@@ -48,7 +48,7 @@ html, body{
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(7, 7, 7, 0.8);
     padding: 8px; 
   }
   
@@ -64,26 +64,41 @@ html, body{
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(7, 7, 7, 0.8);
     padding: 8px; 
   }
 
-
-
-
   .lifestyle {
+    position: relative;
     background-image: url('/lifestyle.jpg');
     background-size: cover;
     height: 40vh;
     background-repeat: no-repeat;
   }
+  .lifestyle .footer-text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(7, 7, 7, 0.8);
+    padding: 8px; 
+  }
   .soundtrack {
+    position: relative;
     background-image: url('/soundtrack.jpg');
     background-size: cover;
     height: 40vh;
     background-repeat: no-repeat;
   }
  
+  .soundtrack .footer-text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(7, 7, 7, 0.8);
+    padding: 8px; 
+  }
   
   
 

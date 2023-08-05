@@ -11,7 +11,8 @@ const Navbar = () => {
   const router = useRouter();
   const isIndexPage = router.pathname === "/"; // Check if the current page is the index page
   const isStoryTellerPage = router.pathname === "/StoryTeller"; // Check if the current page is the index page
-  // const isMusiconrPage = router.pathname === "/musicon"; // Check if the current page is the index page
+  const isLifeStylePage = router.pathname === "/LifeStyle"; // Check if the current page is the index page
+  const isSoundPage = router.pathname === "/SoundTrack"; // Check if the current page is the index page
 
   return (
     <nav>
@@ -56,19 +57,32 @@ const Navbar = () => {
               )}
           </ul>
 
-          {/* <ul className="hidden space-x-4 md:flex">
-              {isMusiconrPage && (
+          <ul className="hidden space-x-4 md:flex">
+              {isLifeStylePage && (
                 <>
-                  <Link href="/StoryTeller">
+                  <Link href="/LifeStyle">
                     <li className="headerLink cursor-pointer font-semibold text-white hover:text-black">Home</li>
                   </Link>
-                  <li className="headerLink">Top Musicon </li>
                   <li className="headerLink">New & Popular</li>
-                  <li className="headerLink">Best Musicon</li>
+                  <li className="headerLink">Best Life Style</li>
                   <li className="headerLink">My List</li>
                 </> 
               )}
-          </ul> */}
+          </ul>
+
+          <ul className="hidden space-x-4 md:flex">
+              {isSoundPage && (
+                <>
+                  <Link href="/SoundTrack">
+                    <li className="headerLink cursor-pointer font-semibold text-white hover:text-black">Home</li>
+                  </Link>
+                  <li className="headerLink">Top Sound Track</li>
+                  <li className="headerLink">New & Popular</li>
+                  <li className="headerLink">Best Sound Track</li>
+                  <li className="headerLink">My List</li>
+                </> 
+              )}
+          </ul>
           
         </div>
 

@@ -24,26 +24,31 @@ const Home = () => {
           <p className="uppercase text-2xl">Choose your entertainment</p>
         </div>
         <div className="flex justify-center items-center">
+          {/* Grid Div 1 */}
           <div className="grid grid-cols-2 gap-4">
-            {/* Grid Div 1 */}
-            <div className="storyteller p-4">
-              <Link href="/StoryTeller">
+            <Link href="/StoryTeller">
+              <div className="storyteller p-4">
                 <p className="footer-text">Story Teller</p>
-              </Link>
-              
-            </div>
+              </div>
+            </Link>
+
             {/* Grid Div 2 */}
             <div className="musicon p-4">
-                <p className="footer-text">Musicon</p>
+              <p className="footer-text">Musicon</p>
             </div>
             {/* Grid Div 3 */}
-            <div className="lifestyle p-4">
-              <p className="footer-text-second"> Life Style</p>
-            </div>
+            <Link href="/LifeStyle">
+              <div className="lifestyle p-4">
+                <p className="footer-text"> Life Style</p>
+              </div>
+            </Link>
             {/* Grid Div 4 */}
-            <div className="soundtrack p-4">
-              <p className="footer-text-second"> Sound Track</p>
-            </div>
+
+            <Link href="/SoundTrack">
+              <div className="soundtrack p-4">
+                <p className="footer-text"> Sound Track</p>
+              </div>
+            </Link>
           </div>
         </div>
       </main>
