@@ -1,11 +1,14 @@
 import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/router";
+import {useSession } from "next-auth/react";
 import { signOut } from "next-auth/react";
-
 import { BiSearch } from "react-icons/bi";
 import { BsBellFill } from "react-icons/bs";
 import { BiLogInCircle } from "react-icons/bi";
+import Login from "./Login";
+
+
 
 const Navbar = () => {
   const router = useRouter();
@@ -13,6 +16,15 @@ const Navbar = () => {
   const isStoryTellerPage = router.pathname === "/StoryTeller"; // Check if the current page is the index page
   const isLifeStylePage = router.pathname === "/LifeStyle"; // Check if the current page is the index page
   const isSoundPage = router.pathname === "/SoundTrack"; // Check if the current page is the index page
+  const isMusiconPage = router.pathname === "/Musicon"; // Check if the current page is the index page
+  
+  const { data: session } = useSession();
+  const handleLogout = async () => {
+      await signOut({ redirect: false });
+      router.push("/");
+  };
+
+  if (!session) return <Login />
 
   return (
     <nav>
@@ -83,7 +95,19 @@ const Navbar = () => {
                 </> 
               )}
           </ul>
-          
+          <ul className="hidden space-x-4 md:flex">
+              {isMusiconPage && (
+                <>
+                  <Link href="/Musicon">
+                    <li className="headerLink cursor-pointer font-semibold text-white hover:text-black">Home</li>
+                  </Link>
+                  <li className="headerLink">Top Musicon</li>
+                  <li className="headerLink">New & Popular</li>
+                  <li className="headerLink">Best Musicon</li>
+                  <li className="headerLink">My List</li>
+                </> 
+              )}
+          </ul>
         </div>
 
         <div className="flex items-center space-x-4 text-sm font-light">
@@ -99,7 +123,7 @@ const Navbar = () => {
           {!isIndexPage && (
             <BiLogInCircle
               className="h-6 w-6 cursor-pointer rounded"
-              onClick={() => signOut()}
+              onClick={() => handleLogout()}
             />
           )}
         </div>

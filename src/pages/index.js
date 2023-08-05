@@ -33,9 +33,12 @@ const Home = () => {
             </Link>
 
             {/* Grid Div 2 */}
-            <div className="musicon p-4">
-              <p className="footer-text">Musicon</p>
-            </div>
+            <Link href="/Musicon">
+              <div className="musicon p-4">
+                <p className="footer-text">Musicon</p>
+              </div>
+            </Link>
+           
             {/* Grid Div 3 */}
             <Link href="/LifeStyle">
               <div className="lifestyle p-4">

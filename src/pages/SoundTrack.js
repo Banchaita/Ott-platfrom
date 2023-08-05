@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { getSession,useSession } from "next-auth/react";
+import { getSession } from "next-auth/react";
 import Login from "@/components/Login";
 import requests from "@/utils/requests";
 import Hero from "@/components/Hero";
@@ -18,9 +18,7 @@ export default function SoundTrack({
     romanceMovies,
     documentaries,
 }) {
-    const {data:session} = useSession();
-    if(!session) return <Login/>;
-
+   
   return(
     <>
         <Head>

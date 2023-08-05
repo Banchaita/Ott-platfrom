@@ -1,11 +1,11 @@
 import Head from "next/head";
 import { getSession } from "next-auth/react";
+import Login from "@/components/Login";
 import requests from "@/utils/requests";
 import Hero from "@/components/Hero";
 import Row from "@/components/Row";
 
-
-export default function StoryTeller({
+export default function Musicon({
     moviePosters,
     trendingNow,
     topRated,
@@ -15,8 +15,7 @@ export default function StoryTeller({
     romanceMovies,
     documentaries,
 }) {
- 
-
+   
   return(
     <>
         <Head>
