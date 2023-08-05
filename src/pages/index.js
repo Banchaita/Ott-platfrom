@@ -1,14 +1,10 @@
 import Head from 'next/head'
 import React from 'react'
-import { getSession, useSession } from "next-auth/react";
-import Login from "@/components/Login";
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
 
-const Home = () => {
 
-  const { data: session } = useSession()
-  if (!session) return <Login />
+const Home = () => {
 
   return (
     <>
