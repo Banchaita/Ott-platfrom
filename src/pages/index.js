@@ -24,28 +24,26 @@ const Home = () => {
           <div className="grid grid-cols-2 gap-4">
             <Link href="/StoryTeller">
               <div className="storyteller p-4">
-                <p className="footer-text">Story Teller</p>
               </div>
             </Link>
 
             {/* Grid Div 2 */}
             <Link href="/Musicon">
               <div className="musicon p-4">
-                <p className="footer-text">Musicon</p>
               </div>
             </Link>
            
             {/* Grid Div 3 */}
             <Link href="/LifeStyle">
               <div className="lifestyle p-4">
-                <p className="footer-text"> Life Style</p>
+                {/* <p className="footer-text"> Life Style</p> */}
               </div>
             </Link>
             {/* Grid Div 4 */}
 
             <Link href="/SoundTrack">
               <div className="soundtrack p-4">
-                <p className="footer-text"> Sound Track</p>
+                {/* <p className="footer-text"> Sound Track</p> */}
               </div>
             </Link>
           </div>
